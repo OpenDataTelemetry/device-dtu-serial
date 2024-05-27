@@ -1,0 +1,443 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (30) boot: ESP-IDF v5.2.1 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time May 27 2024 19:17:13[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (34) boot: chip revision: v1.0[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (68) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (83) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a5ech ( 42476) map[0m
+[0;32mI (118) esp_image: segment 1: paddr=0001a614 vaddr=3ffb0000 size=02264h (  8804) load[0m
+[0;32mI (121) esp_image: segment 2: paddr=0001c880 vaddr=40080000 size=03798h ( 14232) load[0m
+[0;32mI (129) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1609ch ( 90268) map[0m
+[0;32mI (163) esp_image: segment 4: paddr=000360c4 vaddr=40083798 size=09264h ( 37476) load[0m
+[0;32mI (184) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (184) boot: Disabling RNG early entropy source...[0m
+[0;32mI (196) cpu_start: Multicore app[0m
+[0;32mI (205) cpu_start: Pro cpu start user code[0m
+[0;32mI (205) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (205) cpu_start: Application information:[0m
+[0;32mI (208) cpu_start: Project name:     twai_self_test_example[0m
+[0;32mI (214) cpu_start: App version:      ca06c76-dirty[0m
+[0;32mI (219) cpu_start: Compile time:     May 27 2024 19:17:18[0m
+[0;32mI (226) cpu_start: ELF file SHA256:  8991f3c2d...[0m
+[0;32mI (231) cpu_start: ESP-IDF:          v5.2.1[0m
+[0;32mI (236) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (240) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (245) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (250) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (257) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (263) heap_init: At 3FFB2B38 len 0002D4C8 (181 KiB): DRAM[0m
+[0;32mI (270) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (276) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (282) heap_init: At 4008C9FC len 00013604 (77 KiB): IRAM[0m
+[0;32mI (290) spi_flash: detected chip: generic[0m
+[0;32mI (293) spi_flash: flash io: dio[0m
+[0;33mW (297) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (311) main_task: Started on CPU0[0m
+[0;32mI (321) main_task: Calling app_main()[0m
+[0;32mI (321) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (321) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (331) TWAI Self Test: Driver installed[0m
+[0;32mI (341) TWAI Self Test: Driver started[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x103 (ESP_ERR_INVALID_STATE) at 0x400d55ff
+file: "./main/twai_self_test_example_main.c" line 76
+func: twai_transmit_task
+expression: twai_transmit(&tx_msg, portMAX_DELAY)
+
+abort() was called at PC 0x400857db on core 0
+
+
+Backtrace: 0x40081612:0x3ffb8e30 0x400857e5:0x3ffb8e50 0x4008b38d:0x3ffb8e70 0x400857db:0x3ffb8ee0 0x400d55ff:0x3ffb8f10 0x40086301:0x3ffb8f50
+
+
+
+
+ELF file SHA256: 8991f3c2d
+
+Rebooting...
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (30) boot: ESP-IDF v5.2.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time May 27 2024 19:17:13[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a5ech ( 42476) map[0m
+[0;32mI (119) esp_image: segment 1: paddr=0001a614 vaddr=3ffb0000 size=02264h (  8804) load[0m
+[0;32mI (122) esp_image: segment 2: paddr=0001c880 vaddr=40080000 size=03798h ( 14232) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1609ch ( 90268) map[0m
+[0;32mI (164) esp_image: segment 4: paddr=000360c4 vaddr=40083798 size=09264h ( 37476) load[0m
+[0;32mI (185) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (185) boot: Disabling RNG early entropy source...[0m
+[0;32mI (197) cpu_start: Multicore app[0m
+[0;32mI (205) cpu_start: Pro cpu start user code[0m
+[0;32mI (205) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (206) cpu_start: Application information:[0m
+[0;32mI (209) cpu_start: Project name:     twai_self_test_example[0m
+[0;32mI (215) cpu_start: App version:      ca06c76-dirty[0m
+[0;32mI (220) cpu_start: Compile time:     May 27 2024 19:17:18[0m
+[0;32mI (226) cpu_start: ELF file SHA256:  8991f3c2d...[0m
+[0;32mI (232) cpu_start: ESP-IDF:          v5.2.1[0m
+[0;32mI (237) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (241) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (246) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (251) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (258) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (264) heap_init: At 3FFB2B38 len 0002D4C8 (181 KiB): DRAM[0m
+[0;32mI (270) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (277) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (283) heap_init: At 4008C9FC len 00013604 (77 KiB): IRAM[0m
+[0;32mI (291) spi_flash: detected chip: generic[0m
+[0;32mI (294) spi_flash: flash io: dio[0m
+[0;33mW (298) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (312) main_task: Started on CPU0[0m
+[0;32mI (322) main_task: Calling app_main()[0m
+[0;32mI (322) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (322) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (332) TWAI Self Test: Driver installed[0m
+[0;32mI (342) TWAI Self Test: Driver started[0m
+[0;32mI (15142) TWAI Self Test: Msg received	ID 0x555	Data = 0[0m
+[0;32mI (15142) TWAI Self Test: Msg received	ID 0x555	Data = 1[0m
+[0;32mI (15142) TWAI Self Test: Msg received	ID 0x555	Data = 2[0m
+[0;32mI (15142) TWAI Self Test: Msg received	ID 0x555	Data = 3[0m
+[0;32mI (15152) TWAI Self Test: Msg received	ID 0x555	Data = 4[0m
+[0;32mI (15152) TWAI Self Test: Msg received	ID 0x555	Data = 5[0m
+[0;32mI (15162) TWAI Self Test: Msg received	ID 0x555	Data = 6[0m
+[0;32mI (15172) TWAI Self Test: Msg received	ID 0x555	Data = 7[0m
+[0;32mI (15172) TWAI Self Test: Msg received	ID 0x555	Data = 8[0m
+[0;32mI (15182) TWAI Self Test: Msg received	ID 0x555	Data = 9[0m
+[0;32mI (15182) TWAI Self Test: Msg received	ID 0x555	Data = 10[0m
+[0;32mI (15192) TWAI Self Test: Msg received	ID 0x555	Data = 11[0m
+[0;32mI (15202) TWAI Self Test: Msg received	ID 0x555	Data = 12[0m
+[0;32mI (15212) TWAI Self Test: Msg received	ID 0x555	Data = 13[0m
+[0;32mI (15222) TWAI Self Test: Msg received	ID 0x555	Data = 14[0m
+[0;32mI (15232) TWAI Self Test: Msg received	ID 0x555	Data = 15[0m
+[0;32mI (15242) TWAI Self Test: Msg received	ID 0x555	Data = 16[0m
+[0;32mI (15252) TWAI Self Test: Msg received	ID 0x555	Data = 17[0m
+[0;32mI (15262) TWAI Self Test: Msg received	ID 0x555	Data = 18[0m
+[0;32mI (15272) TWAI Self Test: Msg received	ID 0x555	Data = 19[0m
+[0;32mI (15282) TWAI Self Test: Msg received	ID 0x555	Data = 20[0m
+[0;32mI (15292) TWAI Self Test: Msg received	ID 0x555	Data = 21[0m
+[0;32mI (15302) TWAI Self Test: Msg received	ID 0x555	Data = 22[0m
+[0;32mI (15312) TWAI Self Test: Msg received	ID 0x555	Data = 23[0m
+[0;32mI (15322) TWAI Self Test: Msg received	ID 0x555	Data = 24[0m
+[0;32mI (15332) TWAI Self Test: Msg received	ID 0x555	Data = 25[0m
+[0;32mI (15342) TWAI Self Test: Msg received	ID 0x555	Data = 26[0m
+[0;32mI (15352) TWAI Self Test: Msg received	ID 0x555	Data = 27[0m
+[0;32mI (15362) TWAI Self Test: Msg received	ID 0x555	Data = 28[0m
+[0;32mI (15372) TWAI Self Test: Msg received	ID 0x555	Data = 29[0m
+[0;32mI (15382) TWAI Self Test: Msg received	ID 0x555	Data = 30[0m
+[0;32mI (15392) TWAI Self Test: Msg received	ID 0x555	Data = 31[0m
+[0;32mI (15402) TWAI Self Test: Msg received	ID 0x555	Data = 32[0m
+[0;32mI (15412) TWAI Self Test: Msg received	ID 0x555	Data = 33[0m
+[0;32mI (15422) TWAI Self Test: Msg received	ID 0x555	Data = 34[0m
+[0;32mI (15432) TWAI Self Test: Msg received	ID 0x555	Data = 35[0m
+[0;32mI (15442) TWAI Self Test: Msg received	ID 0x555	Data = 36[0m
+[0;32mI (15452) TWAI Self Test: Msg received	ID 0x555	Data = 37[0m
+[0;32mI (15462) TWAI Self Test: Msg received	ID 0x555	Data = 38[0m
+[0;32mI (15472) TWAI Self Test: Msg received	ID 0x555	Data = 39[0m
+[0;32mI (15482) TWAI Self Test: Msg received	ID 0x555	Data = 40[0m
+[0;32mI (15492) TWAI Self Test: Msg received	ID 0x555	Data = 41[0m
+[0;32mI (15502) TWAI Self Test: Msg received	ID 0x555	Data = 42[0m
+[0;32mI (15512) TWAI Self Test: Msg received	ID 0x555	Data = 43[0m
+[0;32mI (15522) TWAI Self Test: Msg received	ID 0x555	Data = 44[0m
+[0;32mI (15532) TWAI Self Test: Msg received	ID 0x555	Data = 45[0m
+[0;32mI (15542) TWAI Self Test: Msg received	ID 0x555	Data = 46[0m
+[0;32mI (15552) TWAI Self Test: Msg received	ID 0x555	Data = 47[0m
+[0;32mI (15562) TWAI Self Test: Msg received	ID 0x555	Data = 48[0m
+[0;32mI (15572) TWAI Self Test: Msg received	ID 0x555	Data = 49[0m
+[0;32mI (15582) TWAI Self Test: Msg received	ID 0x555	Data = 50[0m
+[0;32mI (15592) TWAI Self Test: Msg received	ID 0x555	Data = 51[0m
+[0;32mI (15602) TWAI Self Test: Msg received	ID 0x555	Data = 52[0m
+[0;32mI (15612) TWAI Self Test: Msg received	ID 0x555	Data = 53[0m
+[0;32mI (15622) TWAI Self Test: Msg received	ID 0x555	Data = 54[0m
+[0;32mI (15632) TWAI Self Test: Msg received	ID 0x555	Data = 55[0m
+[0;32mI (15642) TWAI Self Test: Msg received	ID 0x555	Data = 56[0m
+[0;32mI (15652) TWAI Self Test: Msg received	ID 0x555	Data = 57[0m
+[0;32mI (15662) TWAI Self Test: Msg received	ID 0x555	Data = 58[0m
+[0;32mI (15672) TWAI Self Test: Msg received	ID 0x555	Data = 59[0m
+[0;32mI (15682) TWAI Self Test: Msg received	ID 0x555	Data = 60[0m
+[0;32mI (15692) TWAI Self Test: Msg received	ID 0x555	Data = 61[0m
+[0;32mI (15702) TWAI Self Test: Msg received	ID 0x555	Data = 62[0m
+[0;32mI (15712) TWAI Self Test: Msg received	ID 0x555	Data = 63[0m
+[0;32mI (15722) TWAI Self Test: Msg received	ID 0x555	Data = 64[0m
+[0;32mI (15732) TWAI Self Test: Msg received	ID 0x555	Data = 65[0m
+[0;32mI (15742) TWAI Self Test: Msg received	ID 0x555	Data = 66[0m
+[0;32mI (15752) TWAI Self Test: Msg received	ID 0x555	Data = 67[0m
+[0;32mI (15762) TWAI Self Test: Msg received	ID 0x555	Data = 68[0m
+[0;32mI (15772) TWAI Self Test: Msg received	ID 0x555	Data = 69[0m
+[0;32mI (15782) TWAI Self Test: Msg received	ID 0x555	Data = 70[0m
+[0;32mI (15792) TWAI Self Test: Msg received	ID 0x555	Data = 71[0m
+[0;32mI (15802) TWAI Self Test: Msg received	ID 0x555	Data = 72[0m
+[0;32mI (15812) TWAI Self Test: Msg received	ID 0x555	Data = 73[0m
+[0;32mI (15822) TWAI Self Test: Msg received	ID 0x555	Data = 74[0m
+[0;32mI (15832) TWAI Self Test: Msg received	ID 0x555	Data = 75[0m
+[0;32mI (15842) TWAI Self Test: Msg received	ID 0x555	Data = 76[0m
+[0;32mI (15852) TWAI Self Test: Msg received	ID 0x555	Data = 77[0m
+[0;32mI (15862) TWAI Self Test: Msg received	ID 0x555	Data = 78[0m
+[0;32mI (15872) TWAI Self Test: Msg received	ID 0x555	Data = 79[0m
+[0;32mI (15882) TWAI Self Test: Msg received	ID 0x555	Data = 80[0m
+[0;32mI (15892) TWAI Self Test: Msg received	ID 0x555	Data = 81[0m
+[0;32mI (15902) TWAI Self Test: Msg received	ID 0x555	Data = 82[0m
+[0;32mI (15912) TWAI Self Test: Msg received	ID 0x555	Data = 83[0m
+[0;32mI (15922) TWAI Self Test: Msg received	ID 0x555	Data = 84[0m
+[0;32mI (15932) TWAI Self Test: Msg received	ID 0x555	Data = 85[0m
+[0;32mI (15942) TWAI Self Test: Msg received	ID 0x555	Data = 86[0m
+[0;32mI (15952) TWAI Self Test: Msg received	ID 0x555	Data = 87[0m
+[0;32mI (15962) TWAI Self Test: Msg received	ID 0x555	Data = 88[0m
+[0;32mI (15972) TWAI Self Test: Msg received	ID 0x555	Data = 89[0m
+[0;32mI (15982) TWAI Self Test: Msg received	ID 0x555	Data = 90[0m
+[0;32mI (15992) TWAI Self Test: Msg received	ID 0x555	Data = 91[0m
+[0;32mI (16002) TWAI Self Test: Msg received	ID 0x555	Data = 92[0m
+[0;32mI (16012) TWAI Self Test: Msg received	ID 0x555	Data = 93[0m
+[0;32mI (16022) TWAI Self Test: Msg received	ID 0x555	Data = 94[0m
+[0;32mI (16032) TWAI Self Test: Msg received	ID 0x555	Data = 95[0m
+[0;32mI (16042) TWAI Self Test: Msg received	ID 0x555	Data = 96[0m
+[0;32mI (16052) TWAI Self Test: Msg received	ID 0x555	Data = 97[0m
+[0;32mI (16062) TWAI Self Test: Msg received	ID 0x555	Data = 98[0m
+[0;32mI (16072) TWAI Self Test: Msg received	ID 0x555	Data = 99[0m
+[0;32mI (16072) TWAI Self Test: Driver stopped[0m
+[0;32mI (16172) TWAI Self Test: Driver started[0m
+[0;32mI (16172) TWAI Self Test: Msg received	ID 0x555	Data = 0[0m
+[0;32mI (16182) TWAI Self Test: Msg received	ID 0x555	Data = 1[0m
+[0;32mI (16192) TWAI Self Test: Msg received	ID 0x555	Data = 2[0m
+[0;32mI (16202) TWAI Self Test: Msg received	ID 0x555	Data = 3[0m
+[0;32mI (16212) TWAI Self Test: Msg received	ID 0x555	Data = 4[0m
+[0;32mI (16222) TWAI Self Test: Msg received	ID 0x555	Data = 5[0m
+[0;32mI (16232) TWAI Self Test: Msg received	ID 0x555	Data = 6[0m
+[0;32mI (16242) TWAI Self Test: Msg received	ID 0x555	Data = 7[0m
+[0;32mI (16252) TWAI Self Test: Msg received	ID 0x555	Data = 8[0m
+[0;32mI (16262) TWAI Self Test: Msg received	ID 0x555	Data = 9[0m
+[0;32mI (16272) TWAI Self Test: Msg received	ID 0x555	Data = 10[0m
+[0;32mI (16282) TWAI Self Test: Msg received	ID 0x555	Data = 11[0m
+[0;32mI (16292) TWAI Self Test: Msg received	ID 0x555	Data = 12[0m
+[0;32mI (16302) TWAI Self Test: Msg received	ID 0x555	Data = 13[0m
+[0;32mI (16312) TWAI Self Test: Msg received	ID 0x555	Data = 14[0m
+[0;32mI (16322) TWAI Self Test: Msg received	ID 0x555	Data = 15[0m
+[0;32mI (16332) TWAI Self Test: Msg received	ID 0x555	Data = 16[0m
+[0;32mI (16342) TWAI Self Test: Msg received	ID 0x555	Data = 17[0m
+[0;32mI (16352) TWAI Self Test: Msg received	ID 0x555	Data = 18[0m
+[0;32mI (16362) TWAI Self Test: Msg received	ID 0x555	Data = 19[0m
+[0;32mI (16372) TWAI Self Test: Msg received	ID 0x555	Data = 20[0m
+[0;32mI (16382) TWAI Self Test: Msg received	ID 0x555	Data = 21[0m
+[0;32mI (16392) TWAI Self Test: Msg received	ID 0x555	Data = 22[0m
+[0;32mI (16402) TWAI Self Test: Msg received	ID 0x555	Data = 23[0m
+[0;32mI (16412) TWAI Self Test: Msg received	ID 0x555	Data = 24[0m
+[0;32mI (16422) TWAI Self Test: Msg received	ID 0x555	Data = 25[0m
+[0;32mI (16432) TWAI Self Test: Msg received	ID 0x555	Data = 26[0m
+[0;32mI (16442) TWAI Self Test: Msg received	ID 0x555	Data = 27[0m
+[0;32mI (16452) TWAI Self Test: Msg received	ID 0x555	Data = 28[0m
+[0;32mI (16462) TWAI Self Test: Msg received	ID 0x555	Data = 29[0m
+[0;32mI (16472) TWAI Self Test: Msg received	ID 0x555	Data = 30[0m
+[0;32mI (16482) TWAI Self Test: Msg received	ID 0x555	Data = 31[0m
+[0;32mI (16492) TWAI Self Test: Msg received	ID 0x555	Data = 32[0m
+[0;32mI (16502) TWAI Self Test: Msg received	ID 0x555	Data = 33[0m
+[0;32mI (16512) TWAI Self Test: Msg received	ID 0x555	Data = 34[0m
+[0;32mI (16522) TWAI Self Test: Msg received	ID 0x555	Data = 35[0m
+[0;32mI (16532) TWAI Self Test: Msg received	ID 0x555	Data = 36[0m
+[0;32mI (16542) TWAI Self Test: Msg received	ID 0x555	Data = 37[0m
+[0;32mI (16552) TWAI Self Test: Msg received	ID 0x555	Data = 38[0m
+[0;32mI (16562) TWAI Self Test: Msg received	ID 0x555	Data = 39[0m
+[0;32mI (16572) TWAI Self Test: Msg received	ID 0x555	Data = 40[0m
+[0;32mI (16582) TWAI Self Test: Msg received	ID 0x555	Data = 41[0m
+[0;32mI (16592) TWAI Self Test: Msg received	ID 0x555	Data = 42[0m
+[0;32mI (16602) TWAI Self Test: Msg received	ID 0x555	Data = 43[0m
+[0;32mI (16612) TWAI Self Test: Msg received	ID 0x555	Data = 44[0m
+[0;32mI (16622) TWAI Self Test: Msg received	ID 0x555	Data = 45[0m
+[0;32mI (16632) TWAI Self Test: Msg received	ID 0x555	Data = 46[0m
+[0;32mI (16642) TWAI Self Test: Msg received	ID 0x555	Data = 47[0m
+[0;32mI (16652) TWAI Self Test: Msg received	ID 0x555	Data = 48[0m
+[0;32mI (16662) TWAI Self Test: Msg received	ID 0x555	Data = 49[0m
+[0;32mI (16672) TWAI Self Test: Msg received	ID 0x555	Data = 50[0m
+[0;32mI (16682) TWAI Self Test: Msg received	ID 0x555	Data = 51[0m
+[0;32mI (16692) TWAI Self Test: Msg received	ID 0x555	Data = 52[0m
+[0;32mI (16702) TWAI Self Test: Msg received	ID 0x555	Data = 53[0m
+[0;32mI (16712) TWAI Self Test: Msg received	ID 0x555	Data = 54[0m
+[0;32mI (16722) TWAI Self Test: Msg received	ID 0x555	Data = 55[0m
+[0;32mI (16732) TWAI Self Test: Msg received	ID 0x555	Data = 56[0m
+[0;32mI (16742) TWAI Self Test: Msg received	ID 0x555	Data = 57[0m
+[0;32mI (16752) TWAI Self Test: Msg received	ID 0x555	Data = 58[0m
+[0;32mI (16762) TWAI Self Test: Msg received	ID 0x555	Data = 59[0m
+[0;32mI (16772) TWAI Self Test: Msg received	ID 0x555	Data = 60[0m
+[0;32mI (16782) TWAI Self Test: Msg received	ID 0x555	Data = 61[0m
+[0;32mI (16792) TWAI Self Test: Msg received	ID 0x555	Data = 62[0m
+[0;32mI (16802) TWAI Self Test: Msg received	ID 0x555	Data = 63[0m
+[0;32mI (16812) TWAI Self Test: Msg received	ID 0x555	Data = 64[0m
+[0;32mI (16822) TWAI Self Test: Msg received	ID 0x555	Data = 65[0m
+[0;32mI (16832) TWAI Self Test: Msg received	ID 0x555	Data = 66[0m
+[0;32mI (16842) TWAI Self Test: Msg received	ID 0x555	Data = 67[0m
+[0;32mI (16852) TWAI Self Test: Msg received	ID 0x555	Data = 68[0m
+[0;32mI (16862) TWAI Self Test: Msg received	ID 0x555	Data = 69[0m
+[0;32mI (16872) TWAI Self Test: Msg received	ID 0x555	Data = 70[0m
+[0;32mI (16882) TWAI Self Test: Msg received	ID 0x555	Data = 71[0m
+[0;32mI (16892) TWAI Self Test: Msg received	ID 0x555	Data = 72[0m
+[0;32mI (16902) TWAI Self Test: Msg received	ID 0x555	Data = 73[0m
+[0;32mI (16912) TWAI Self Test: Msg received	ID 0x555	Data = 74[0m
+[0;32mI (16922) TWAI Self Test: Msg received	ID 0x555	Data = 75[0m
+[0;32mI (16932) TWAI Self Test: Msg received	ID 0x555	Data = 76[0m
+[0;32mI (16942) TWAI Self Test: Msg received	ID 0x555	Data = 77[0m
+[0;32mI (16952) TWAI Self Test: Msg received	ID 0x555	Data = 78[0m
+[0;32mI (16962) TWAI Self Test: Msg received	ID 0x555	Data = 79[0m
+[0;32mI (16972) TWAI Self Test: Msg received	ID 0x555	Data = 80[0m
+[0;32mI (16982) TWAI Self Test: Msg received	ID 0x555	Data = 81[0m
+[0;32mI (16992) TWAI Self Test: Msg received	ID 0x555	Data = 82[0m
+[0;32mI (17002) TWAI Self Test: Msg received	ID 0x555	Data = 83[0m
+[0;32mI (17012) TWAI Self Test: Msg received	ID 0x555	Data = 84[0m
+[0;32mI (17022) TWAI Self Test: Msg received	ID 0x555	Data = 85[0m
+[0;32mI (17032) TWAI Self Test: Msg received	ID 0x555	Data = 86[0m
+[0;32mI (17042) TWAI Self Test: Msg received	ID 0x555	Data = 87[0m
+[0;32mI (17052) TWAI Self Test: Msg received	ID 0x555	Data = 88[0m
+[0;32mI (17062) TWAI Self Test: Msg received	ID 0x555	Data = 89[0m
+[0;32mI (17072) TWAI Self Test: Msg received	ID 0x555	Data = 90[0m
+[0;32mI (17082) TWAI Self Test: Msg received	ID 0x555	Data = 91[0m
+[0;32mI (17092) TWAI Self Test: Msg received	ID 0x555	Data = 92[0m
+[0;32mI (17102) TWAI Self Test: Msg received	ID 0x555	Data = 93[0m
+[0;32mI (17112) TWAI Self Test: Msg received	ID 0x555	Data = 94[0m
+[0;32mI (17122) TWAI Self Test: Msg received	ID 0x555	Data = 95[0m
+[0;32mI (17132) TWAI Self Test: Msg received	ID 0x555	Data = 96[0m
+[0;32mI (17142) TWAI Self Test: Msg received	ID 0x555	Data = 97[0m
+[0;32mI (17152) TWAI Self Test: Msg received	ID 0x555	Data = 98[0m
+[0;32mI (17162) TWAI Self Test: Msg received	ID 0x555	Data = 99[0m
+[0;32mI (17162) TWAI Self Test: Driver stopped[0m
+[0;32mI (17262) TWAI Self Test: Driver started[0m
+[0;32mI (17262) TWAI Self Test: Msg received	ID 0x555	Data = 0[0m
+[0;32mI (17272) TWAI Self Test: Msg received	ID 0x555	Data = 1[0m
+[0;32mI (17282) TWAI Self Test: Msg received	ID 0x555	Data = 2[0m
+[0;32mI (17292) TWAI Self Test: Msg received	ID 0x555	Data = 3[0m
+[0;32mI (17302) TWAI Self Test: Msg received	ID 0x555	Data = 4[0m
+[0;32mI (17312) TWAI Self Test: Msg received	ID 0x555	Data = 5[0m
+[0;32mI (17322) TWAI Self Test: Msg received	ID 0x555	Data = 6[0m
+[0;32mI (17332) TWAI Self Test: Msg received	ID 0x555	Data = 7[0m
+[0;32mI (17342) TWAI Self Test: Msg received	ID 0x555	Data = 8[0m
+[0;32mI (17352) TWAI Self Test: Msg received	ID 0x555	Data = 9[0m
+[0;32mI (17362) TWAI Self Test: Msg received	ID 0x555	Data = 10[0m
+[0;32mI (17372) TWAI Self Test: Msg received	ID 0x555	Data = 11[0m
+[0;32mI (17382) TWAI Self Test: Msg received	ID 0x555	Data = 12[0m
+[0;32mI (17392) TWAI Self Test: Msg received	ID 0x555	Data = 13[0m
+[0;32mI (17402) TWAI Self Test: Msg received	ID 0x555	Data = 14[0m
+[0;32mI (17412) TWAI Self Test: Msg received	ID 0x555	Data = 15[0m
+[0;32mI (17422) TWAI Self Test: Msg received	ID 0x555	Data = 16[0m
+[0;32mI (17432) TWAI Self Test: Msg received	ID 0x555	Data = 17[0m
+[0;32mI (17442) TWAI Self Test: Msg received	ID 0x555	Data = 18[0m
+[0;32mI (17452) TWAI Self Test: Msg received	ID 0x555	Data = 19[0m
+[0;32mI (17462) TWAI Self Test: Msg received	ID 0x555	Data = 20[0m
+[0;32mI (17472) TWAI Self Test: Msg received	ID 0x555	Data = 21[0m
+[0;32mI (17482) TWAI Self Test: Msg received	ID 0x555	Data = 22[0m
+[0;32mI (17492) TWAI Self Test: Msg received	ID 0x555	Data = 23[0m
+[0;32mI (17502) TWAI Self Test: Msg received	ID 0x555	Data = 24[0m
+[0;32mI (17512) TWAI Self Test: Msg received	ID 0x555	Data = 25[0m
+[0;32mI (17522) TWAI Self Test: Msg received	ID 0x555	Data = 26[0m
+[0;32mI (17532) TWAI Self Test: Msg received	ID 0x555	Data = 27[0m
+[0;32mI (17542) TWAI Self Test: Msg received	ID 0x555	Data = 28[0m
+[0;32mI (17552) TWAI Self Test: Msg received	ID 0x555	Data = 29[0m
+[0;32mI (17562) TWAI Self Test: Msg received	ID 0x555	Data = 30[0m
+[0;32mI (17572) TWAI Self Test: Msg received	ID 0x555	Data = 31[0m
+[0;32mI (17582) TWAI Self Test: Msg received	ID 0x555	Data = 32[0m
+[0;32mI (17592) TWAI Self Test: Msg received	ID 0x555	Data = 33[0m
+[0;32mI (17602) TWAI Self Test: Msg received	ID 0x555	Data = 34[0m
+[0;32mI (17612) TWAI Self Test: Msg received	ID 0x555	Data = 35[0m
+[0;32mI (17622) TWAI Self Test: Msg received	ID 0x555	Data = 36[0m
+[0;32mI (17632) TWAI Self Test: Msg received	ID 0x555	Data = 37[0m
+[0;32mI (17642) TWAI Self Test: Msg received	ID 0x555	Data = 38[0m
+[0;32mI (17652) TWAI Self Test: Msg received	ID 0x555	Data = 39[0m
+[0;32mI (17662) TWAI Self Test: Msg received	ID 0x555	Data = 40[0m
+[0;32mI (17672) TWAI Self Test: Msg received	ID 0x555	Data = 41[0m
+[0;32mI (17682) TWAI Self Test: Msg received	ID 0x555	Data = 42[0m
+[0;32mI (17692) TWAI Self Test: Msg received	ID 0x555	Data = 43[0m
+[0;32mI (17702) TWAI Self Test: Msg received	ID 0x555	Data = 44[0m
+[0;32mI (17712) TWAI Self Test: Msg received	ID 0x555	Data = 45[0m
+[0;32mI (17722) TWAI Self Test: Msg received	ID 0x555	Data = 46[0m
+[0;32mI (17732) TWAI Self Test: Msg received	ID 0x555	Data = 47[0m
+[0;32mI (17742) TWAI Self Test: Msg received	ID 0x555	Data = 48[0m
+[0;32mI (17752) TWAI Self Test: Msg received	ID 0x555	Data = 49[0m
+[0;32mI (17762) TWAI Self Test: Msg received	ID 0x555	Data = 50[0m
+[0;32mI (17772) TWAI Self Test: Msg received	ID 0x555	Data = 51[0m
+[0;32mI (17782) TWAI Self Test: Msg received	ID 0x555	Data = 52[0m
+[0;32mI (17792) TWAI Self Test: Msg received	ID 0x555	Data = 53[0m
+[0;32mI (17802) TWAI Self Test: Msg received	ID 0x555	Data = 54[0m
+[0;32mI (17812) TWAI Self Test: Msg received	ID 0x555	Data = 55[0m
+[0;32mI (17822) TWAI Self Test: Msg received	ID 0x555	Data = 56[0m
+[0;32mI (17832) TWAI Self Test: Msg received	ID 0x555	Data = 57[0m
+[0;32mI (17842) TWAI Self Test: Msg received	ID 0x555	Data = 58[0m
+[0;32mI (17852) TWAI Self Test: Msg received	ID 0x555	Data = 59[0m
+[0;32mI (17862) TWAI Self Test: Msg received	ID 0x555	Data = 60[0m
+[0;32mI (17872) TWAI Self Test: Msg received	ID 0x555	Data = 61[0m
+[0;32mI (17882) TWAI Self Test: Msg received	ID 0x555	Data = 62[0m
+[0;32mI (17892) TWAI Self Test: Msg received	ID 0x555	Data = 63[0m
+[0;32mI (17902) TWAI Self Test: Msg received	ID 0x555	Data = 64[0m
+[0;32mI (17912) TWAI Self Test: Msg received	ID 0x555	Data = 65[0m
+[0;32mI (17922) TWAI Self Test: Msg received	ID 0x555	Data = 66[0m
+[0;32mI (17932) TWAI Self Test: Msg received	ID 0x555	Data = 67[0m
+[0;32mI (17942) TWAI Self Test: Msg received	ID 0x555	Data = 68[0m
+[0;32mI (17952) TWAI Self Test: Msg received	ID 0x555	Data = 69[0m
+[0;32mI (17962) TWAI Self Test: Msg received	ID 0x555	Data = 70[0m
+[0;32mI (17972) TWAI Self Test: Msg received	ID 0x555	Data = 71[0m
+[0;32mI (17982) TWAI Self Test: Msg received	ID 0x555	Data = 72[0m
+[0;32mI (17992) TWAI Self Test: Msg received	ID 0x555	Data = 73[0m
+[0;32mI (18002) TWAI Self Test: Msg received	ID 0x555	Data = 74[0m
+[0;32mI (18012) TWAI Self Test: Msg received	ID 0x555	Data = 75[0m
+[0;32mI (18022) TWAI Self Test: Msg received	ID 0x555	Data = 76[0m
+[0;32mI (18032) TWAI Self Test: Msg received	ID 0x555	Data = 77[0m
+[0;32mI (18042) TWAI Self Test: Msg received	ID 0x555	Data = 78[0m
+[0;32mI (18052) TWAI Self Test: Msg received	ID 0x555	Data = 79[0m
+[0;32mI (18062) TWAI Self Test: Msg received	ID 0x555	Data = 80[0m
+[0;32mI (18072) TWAI Self Test: Msg received	ID 0x555	Data = 81[0m
+[0;32mI (18082) TWAI Self Test: Msg received	ID 0x555	Data = 82[0m
+[0;32mI (18092) TWAI Self Test: Msg received	ID 0x555	Data = 83[0m
+[0;32mI (18102) TWAI Self Test: Msg received	ID 0x555	Data = 84[0m
+[0;32mI (18112) TWAI Self Test: Msg received	ID 0x555	Data = 85[0m
+[0;32mI (18122) TWAI Self Test: Msg received	ID 0x555	Data = 86[0m
+[0;32mI (18132) TWAI Self Test: Msg received	ID 0x555	Data = 87[0m
+[0;32mI (18142) TWAI Self Test: Msg received	ID 0x555	Data = 88[0m
+[0;32mI (18152) TWAI Self Test: Msg received	ID 0x555	Data = 89[0m
+[0;32mI (18162) TWAI Self Test: Msg received	ID 0x555	Data = 90[0m
+[0;32mI (18172) TWAI Self Test: Msg received	ID 0x555	Data = 91[0m
+[0;32mI (18182) TWAI Self Test: Msg received	ID 0x555	Data = 92[0m
+[0;32mI (18192) TWAI Self Test: Msg received	ID 0x555	Data = 93[0m
+[0;32mI (18202) TWAI Self Test: Msg received	ID 0x555	Data = 94[0m
+[0;32mI (18212) TWAI Self Test: Msg received	ID 0x555	Data = 95[0m
+[0;32mI (18222) TWAI Self Test: Msg received	ID 0x555	Data = 96[0m
+[0;32mI (18232) TWAI Self Test: Msg received	ID 0x555	Data = 97[0m
+[0;32mI (18242) TWAI Self Test: Msg received	ID 0x555	Data = 98[0m
+[0;32mI (18252) TWAI Self Test: Msg received	ID 0x555	Data = 99[0m
+[0;32mI (18252) TWAI Self Test: Driver stopped[0m
+[0;32mI (18352) TWAI Self Test: Driver uninstalled[0m
+[0;32mI (18352) main_task: Returned from app_main()[0m

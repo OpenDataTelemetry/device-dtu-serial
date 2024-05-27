@@ -61,5 +61,4 @@
 /workspaces/build/esp-idf/perfmon/libperfmon.a
 /workspaces/build/esp-idf/spiffs/libspiffs.a
 /workspaces/build/esp-idf/wifi_provisioning/libwifi_provisioning.a
-/workspaces/build/esp-idf/protocol_examples_common/libprotocol_examples_common.a
 /workspaces/build/esp-idf/main/libmain.a

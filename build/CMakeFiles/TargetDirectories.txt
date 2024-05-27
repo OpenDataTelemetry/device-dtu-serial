@@ -11,7 +11,7 @@
 /workspaces/build/CMakeFiles/flash.dir
 /workspaces/build/CMakeFiles/encrypted-flash.dir
 /workspaces/build/CMakeFiles/_project_elf_src.dir
-/workspaces/build/CMakeFiles/mqtt5.elf.dir
+/workspaces/build/CMakeFiles/twai_self_test_example.elf.dir
 /workspaces/build/CMakeFiles/size.dir
 /workspaces/build/CMakeFiles/size-files.dir
 /workspaces/build/CMakeFiles/size-components.dir
@@ -628,13 +628,6 @@
 /workspaces/build/esp-idf/wifi_provisioning/CMakeFiles/install.dir
 /workspaces/build/esp-idf/wifi_provisioning/CMakeFiles/install/local.dir
 /workspaces/build/esp-idf/wifi_provisioning/CMakeFiles/install/strip.dir
-/workspaces/build/esp-idf/protocol_examples_common/CMakeFiles/__idf_protocol_examples_common.dir
-/workspaces/build/esp-idf/protocol_examples_common/CMakeFiles/edit_cache.dir
-/workspaces/build/esp-idf/protocol_examples_common/CMakeFiles/rebuild_cache.dir
-/workspaces/build/esp-idf/protocol_examples_common/CMakeFiles/list_install_components.dir
-/workspaces/build/esp-idf/protocol_examples_common/CMakeFiles/install.dir
-/workspaces/build/esp-idf/protocol_examples_common/CMakeFiles/install/local.dir
-/workspaces/build/esp-idf/protocol_examples_common/CMakeFiles/install/strip.dir
 /workspaces/build/esp-idf/main/CMakeFiles/__idf_main.dir
 /workspaces/build/esp-idf/main/CMakeFiles/edit_cache.dir
 /workspaces/build/esp-idf/main/CMakeFiles/rebuild_cache.dir
