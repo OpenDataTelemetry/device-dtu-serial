@@ -1,27 +1,62 @@
 # device-esp-idf
 
-## Init docker container in vscode
-
-## Share USB with container
-### On Windows:
-Download: https://github.com/espressif/esptool/releases
+## Share USB Serial with container
+* On Windows:
+  - Download: https://github.com/espressif/esptool/releases
+  - Share Serial:
+  ```bash
+  esp_rfc2217_server -v -p 4000 COM3
+  ```
+* On Linux/Mac:
+  - Download:
+  ```bash
+  pip install esptool
+  ```
+  - Share Serial:
+  * Linux
+  ```bash
+  esp_rfc2217_server.py -v -p 4000 /dev/ttyUSB0
+  ```
+  * Mac
+  ```bash
+  esp_rfc2217_server.py -v -p 4000 /dev/tty.usbserial-0001
+  ```
+## Clone this repository:
 ```bash
-esp_rfc2217_server -v -p 4000 COM3
+mkdir -p ~/Git/OpenDataTelemetry
+cd ~/Git/OpenDataTelemetry
+git clone https://github.com/OpenDataTelemetry/device-dtu-serial.git
+code ~/Git/OpenDataTelemetry/device-dtu-serial
 ```
-### On Linux/Mac:
+Reopen folder in Container with Remote Extension.
+
+## From Container in VSCode Remote
+* Build
 ```bash
-pip install esptool
-# Linux
-esp_rfc2217_server.py -v -p 4000 /dev/ttyUSB0
-# Mac
-esp_rfc2217_server.py -v -p 4000 /dev/tty.usbserial-0001
+idf.py build
+```
+* Flash
+```bash
+idf.py --port rfc2217://HOST:4000?ign_set_control flash
+```
+* Flash and Monitor
+```bash
+idf.py --port rfc2217://HOST:4000?ign_set_control flash monitor
 ```
 
+> Note:
+>  HOST: 
+>  * WSL2/Mac: host.docker.internal
+>  * Linux: 172.17.0.1
+
+
+
+
+
+#Deprecated
 ## From terminal:
 ### Build
-Host: 
-  * Windows/Mac: host.docker.internal
-  * Linux: 172.17.0.1
+
     ```bash
     docker run --rm -v <host_path>:/workspaces \
         -w /workspaces espressif/idf:release-v4.4 \
@@ -49,32 +84,6 @@ Host:
         --port 'rfc2217://HOST:4000?ign_set_control' \
         flash monitor
     ```
-
-## From Container:
-SerialPath: 
-  * Windows:
-  * Mac: /dev//tty.usbserial-0001
-  * Linux: /dev/ttyUSB0
-  
-### Attach to Container:
-```bash
-docker run -it --device=SERIAL_PATH:/dev/ttyUSB0 \
-    -v $PWD:/workspaces -w /workspaces espressif/idf:release-v4.4 \
-    idf.py monitor -p SERIAL_PATH
-```
-### Build
-```bash
-idf.py build
-```
-### Flash
-```bash
-idf.py --port rfc2217://HOST:4000?ign_set_control flash
-```
-### Flash and Monitor
-```bash
-idf.py --port rfc2217://HOST:4000?ign_set_control flash monitor
-```
-
 
 
 
