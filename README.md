@@ -1,4 +1,4 @@
-# device-esp-idf
+# device-dtu-serial
 
 ## Share USB Serial with container
 * On Windows:
